@@ -30,7 +30,7 @@ This is a takehome assignment for Fetch backend Engineering Intern Role [Transac
 3. To take this into account all the transactions are first grouped in terms of the payer and then the negative values are subtracted from the positive values inorder to find the effective amount the payer cna pay the user
 4. Only valid inputs are assumed for each payer. ie No negative points can appear first ( as per timestamp ) as it is not possible to return points to the payer without them contributing first.
    
-5. **Given th elimited amount of time all test cases haven't been exhaustively tested but there are tests for every situations mentioned above**
+5. **Given the limited amount of time all test cases haven't been exhaustively tested but there are tests for every situations mentioned above**
 
 
 ## Setup instructions
@@ -42,11 +42,6 @@ The code has been developed and tested using python 3.9.12 and pip 21.2.4 **but 
 
 Please follow the link given to install python 3.9.12 https://www.python.org/downloads/release/python-3912/
 
-to install pip just enter the command 
-
-``` 
-~ python -m pip install 
-```
 
 to verify the installation of python and pip
 
@@ -80,7 +75,7 @@ File not found!
 
 Four unit testcases have been written to ensure the proper functioning of the script. To run all testcases just do the following
 ```
-~ sudo pytest
+~ pytest
 ```
 
 ## Usage :
@@ -138,7 +133,7 @@ Insufficient Balance!
 }
 ```
 
-#### ***3. Corner case***
+#### ***3. Handling the negative values present in the transactions***
 
 There is a -200 that the user spent on DANNON in this situation, so that DANNON cannot pay the entire amount first. As a result, DANNON pays 100 points and UNILEVER pays the remaining 200.
 
